@@ -1,7 +1,7 @@
 import requests
 from requests.auth import HTTPBasicAuth
 
-token = requests.post("https://api.umbrella.com/auth/v2/token", auth=HTTPBasicAuth('94cc871039a9427ca542fb38d312ca9d','afef2da4115e4299a2b87432ed8ab7ae'))
+token = requests.post("https://api.umbrella.com/auth/v2/token", auth=HTTPBasicAuth('Umbrella_Key','Umbrella_Secret'))
 def bind_to_umb_policy(policy_name,policy_device):
     headers = {"Accept": "application/json",
                "Authorization": "Bearer " + f"{token.json()['access_token']}"}
